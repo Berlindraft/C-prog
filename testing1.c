@@ -1,0 +1,206 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void operations(int num1, int num2)
+{
+if (num1 >= 0 && num2 >= 0){
+printf("+");
+}
+else if (num1 <= 0 && num2 >= 0){
+printf("-");
+}
+else if (num1 >= 0 && num2 <= 0){
+printf("-");
+}
+else if (num1 <= 0 && num2 <= 0){
+printf("+");
+}
+else
+{
+printf("not a valid integer value");
+}
+}
+
+void first(int a, char b, int e, char f)
+{
+
+int coef = a * e;
+int var_b = atoi(&b);
+int var_f = atoi(&f);
+
+
+if (var_b == var_f){
+    printf("%d", coef);
+    printf("%c^2", b);
+}
+else if (var_b != var_f)
+{
+    printf("%d", coef);
+    printf("%c%c", b, f);
+}
+else if (var_b == 0)
+{
+    printf("%d", f);
+}
+else if (var_f == 0)
+{
+    printf("%d", b);
+}
+else {
+    printf("invalid");
+}
+}
+
+
+void outer(int a, int g, char b, char h){
+int coef = a * g;
+int var_b = atoi(&b);
+int var_h = atoi(&h);
+if (var_b == var_h){
+    printf("%d", coef);
+    printf("%c^2", b);
+}
+else if (var_b != var_f)
+{
+    printf("%d", coef);
+    printf("%c%c", b, h);
+}
+else if (var_b == 0)
+{
+    printf("%d", h);
+}
+else if (var_f == 0)
+{
+    printf("%d", b);
+}
+else {
+    printf("invalid");
+}
+}
+
+void inner(int c, int e, char e, char f){
+int inner_num = c * e;
+int num_c = atoi(&c);
+int num_f = atoi(&f);
+if (num_c == num_f){
+    printf("%d", inner_num);
+    printf("%c^2", b);
+}
+else if (num_c != num_f)
+{
+    printf("%d", inner_num);
+    printf("%c%c", c, f);
+}
+else if (num_c == 0)
+{
+    printf("%d", f);
+}
+else if (num_f == 0)
+{
+    printf("%d", c);
+}
+else {
+    printf("invalid");
+}
+}
+
+void mid(){
+
+}
+
+void last(int c, char d, int g, char h)
+{
+int last_num = c * g;
+int num_d = atoi(&d);
+int num_h = atoi(&h);
+if (num_d == num_h){
+    printf("%d", last_num);
+    printf("%c^2", d);
+}
+else if (num_d != num_h)
+{
+    printf("%d", last_num);
+    printf("%c%c", d, h);
+}
+else if (num_d == 0)
+{
+    printf("%d", h);
+}
+else if (num_h == 0)
+{
+    printf("%d", d);
+}
+else {
+    printf("invalid");
+}
+}
+
+int main (){
+
+int a, c, e, g;
+char b, d, f, h;
+
+
+    return 0;
+}
+
+/*
+b=b & d=d       b^2     d^2
+if b=d  2b^2
+else b^2d^2
+    f=f         b^2     f^2
+if b=f  2b^2
+else b^2f^2
+    d!=d        b^2     df
+if b=d || b=f   
+    d=0         b^2     f
+    f=0         b^2     d
+h=h & d=d       h^2     d^2
+    f=f         h^2     f^2
+    d!=d        h^2     df
+    d=0         h^2     f
+    f=0         h^2     d
+b!=b & d=d      bh      d^2
+    f=f         bh      f^2
+    d!=d        bh      df
+    d=0         bh      f
+    f=0         bh      d
+b=0 & d=d       h       d^2
+    f=f         h       f^2
+    d!=d        h       df
+    d=0         h       f
+    f=0         h       d
+h=0 & d=d       b       d^2
+    f=f         b       f^2
+    d!=d        b       df
+    d=0         b       f
+    f=0         b       d
+*/
+
+/*void first(int a, char b, int e, char f)
+{
+int first_num = a * e;
+int num_b = atoi(&b);
+int num_f = atoi(&f);
+if (num_b == num_f){
+    printf("%d", first_num);
+    printf("%c^2", b);
+}
+else if (num_b != num_f)
+{
+    printf("%d", first_num);
+    printf("%c%c", b, f);
+}
+else if (numb_b == 0)
+{
+    printf("%d", f);
+}
+else if (numb_f == 0)
+{
+    printf("%d", d);
+}
+else {
+    printf("invalid");
+}
+}
+*/
